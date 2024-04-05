@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+:root {
+    --main: #f7ae27;
+    --boxShadow: 0 0.5rem 1.3rem rgba(0, 0, 0, 0.7);
+    --boxShadowHover: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.9);
+}
+
+
+* {
+    font-family: 'Cinzel Decorative', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+}
+
+*::selection {
+    background: var(--main);
+    color: #000;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+/* For btn */
+.btn {
+    display: inline-block;
+    box-shadow: var(--boxShadow);
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: 800;
+    border-radius: 0.5rem;
+}
+
+.btn span {
+    background: var(--main);
+    color: #000;
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.btn:hover {
+    background: var(--main);
+    color: #000;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.btn:hover span {
+    background: #fff;
+    color: var(--main);
+    margin-left: 1.1rem;
+}
+
+
+/* For Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main);
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+/* For Content */
+.Content {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.Content h6 {
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+}
+
+.Content h6 span {
+    font-weight: 900;
+    color: var(--main);
+}
+
+
+/* for Navbar */
+.Mainnavbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--boxShadow);
+    padding: 2rem 9%;
+    background: #fff;
+}
+
+.Mainnavbar .Logo img {
+    height: 6rem;
+    width: 6rem;
+    object-fit: cover;
+}
+
+/* For Links */
+.navbar a {
+    color: #000 !important;
+    font-size: 1.6rem;
+    margin-left: 2.2rem;
+    font-weight: 700;
+}
+
+.navbar a:hover {
+    color: var(--main) !important;
+}
+
+/* For MenuBars */
+#MenuBars {
+    font-size: 2.5rem;
+    background: #ddd;
+    padding: 1rem 1.4rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* For Home */
+.Home {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    padding-top: 12rem;
+}
+
+.Home .HomeContent,
+.Home .HomeImg {
+    flex: 1 1 45rem;
+}
+
+.Home .HomeContent h6 {
+    font-weight: 800;
+    font-size: 4.6rem;
+    line-height: 1.9;
+    text-shadow: 0.5rem 0 0.4rem rgba(115, 105, 49, 0.3);
+}
+
+.Home .HomeContent p {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    line-height: 1.6;
+}
+
+/* For Home */
+
+
+/* For About us */
+.About {
+    margin-block: 80px;
+}
+
+.About .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.About .row .Content,
+.About .row .AboutImg {
+    flex: 1 1 45rem;
+}
+
+.About .Content h6 {
+    font-weight: 800;
+    font-size: 4rem;
+    line-height: 1.9;
+}
+
+.About .Content p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+/* For About us */
+
+
+/* For CustomSection */
+.CustomSection {
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    padding-block: 5rem;
+}
+
+.CustomSection .ICon {
+    box-shadow: var(--boxShadow);
+    border: 0.1px solid var(--main);
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.CustomSection .ICon:hover {
+    box-shadow: var(--boxShadowHover);
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.CustomSection .ICon i {
+    color: var(--main);
+    padding-bottom: 0.6rem;
+    font-size: 4.4rem;
+}
+
+.CustomSection .ICon h6 {
+    font-size: 4.2rem;
+    padding: 0.5rem 0;
+    font-weight: 600;
+}
+
+.CustomSection .ICon p {
+    font-size: 1.6rem;
+}
+
+
+/* For OurServices */
+.OurServices {
+    margin-bottom: 100px;
+}
+
+.OurServices .boxContainer,
+.OurDoctors .boxContainer,
+.Review .boxContainer,
+.Blog .boxContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.OurServices .boxContainer .box {
+    box-shadow: var(--boxShadow);
+    border-radius: 0.5rem;
+    border: 0.1px solid var(--main);
+    padding: 2.5rem;
+}
+
+.OurServices .boxContainer .box:hover {
+    transform: scale(1.01);
+    box-shadow: var(--boxShadowHover);
+}
+
+.OurServices .boxContainer .box i {
+    color: var(--main);
+    padding-bottom: 0.5rem;
+    font-size: 5rem;
+}
+
+.OurServices .boxContainer .box h6 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    font-weight: 900;
+}
+
+.OurServices .boxContainer .box p {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+/* For OurDoctors */
+.OurDoctors,
+.Appointments,
+.Review,
+.Blog {
+    margin-bottom: 100px;
+}
+
+.OurDoctors .box {
+    text-align: center;
+    border: 0.1px solid var(--main);
+    border-radius: 0.5rem;
+    box-shadow: var(--boxShadow);
+    padding: 2rem;
+}
+
+.OurDoctors .box:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.OurDoctors .box img {
+    border: 0.1px solid var(--main);
+    height: 20rem;
+    width: 100%;
+    margin-top: 1rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.OurDoctors .box h6 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.OurDoctors .box .Icons {
+    padding-top: 2rem;
+}
+
+.OurDoctors .box .Icons i {
+    font-size: 2rem;
+    line-height: 4.5rem;
+    height: 5rem;
+    width: 5rem;
+    color: var(--main);
+    border: 0.1px solid var(--main);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 0.2rem;
+}
+
+/* for Appointments */
+.Appointments .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.Appointments .row .Img {
+    flex-direction: 1 1 45rem;
+}
+
+.Appointments .Img img {
+    width: 100%;
+}
+
+.Appointments .row form {
+    flex: 1 1 45rem;
+    box-shadow: var(--boxShadow);
+    border: 0.1px solid var(--main);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+.Appointments .row form h6 {
+    font-weight: 800;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+.Appointments .row form .box {
+    width: 100%;
+    margin: 0.6rem 0;
+    text-transform: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: 0.1px solid var(--main);
+    font-weight: 800;
+}
+
+
+
+/* For Review */
+.Review .boxContainer .box {
+    box-shadow: var(--boxShadow);
+    border: 0.1px solid var(--main);
+    border-radius: 0.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.Review .boxContainer .box::before {
+    content: "";
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--main);
+    height: 25rem;
+    width: 120%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    z-index: -1;
+}
+
+.Review .boxContainer .box:hover {
+    box-shadow: var(--boxShadowHover);
+    transform: scale(1.02);
+}
+
+.Review .boxContainer .box img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: 0.1px dashed #bcb9b9;
+    object-fit: cover;
+}
+
+.Review .boxContainer .box h6 {
+    font-size: 2.2rem;
+    padding: 0.5rem 0;
+}
+
+.Review .boxContainer .box i {
+    font-size: 1.5rem;
+}
+
+.Review .boxContainer .box p {
+    font-size: 1.4rem;
+    padding-top: 2rem;
+    line-height: 1.4;
+}
+
+/* For Blogs */
+.Blog .boxContainer .box {
+    border: 0.1px solid var(--main);
+    box-shadow: var(--boxShadow);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.Blog .boxContainer .box:hover {
+    transform: scale(1.02);
+    box-shadow: var(--boxShadowHover);
+}
+
+
+.Blog .boxContainer .box .Img {
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.Blog .boxContainer .box .Img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.Blog .boxContainer .box .boxContent {
+    padding-top: 1rem;
+}
+
+.Blog .boxContainer .box .boxContent .Icon {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.Blog .boxContainer .box .boxContent .Icon p {
+    font-weight: 800;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.Blog .boxContainer .box .boxContent .Icon p i {
+    padding-right: 0.5rem;
+    color: var(--main);
+}
+
+.Blog .boxContainer .box .boxContent h6 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.Blog .boxContainer .boxContent .Desc {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    padding: 1rem 0;
+
+}
+
+
+/* For Blogs */
+
+/* For footer */
+footer {
+    background: var(--main);
+    padding: 2rem;
+    text-align: center;
+}
+
+footer a {
+    color: #fff !important;
+    font-size: 2.1rem;
+}
+
+
+/* Theme Toggle Start */
+.themeToggle {
+    position: fixed;
+    top: 10rem;
+    right: -20rem;
+    background: #000;
+    text-align: center;
+    width: 20rem;
+    z-index: 1000;
+}
+
+.themeToggle.active {
+    right: 0;
+}
+
+.themeToggle h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.themeToggle .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.themeToggle .themeBtn {
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.themeToggle .ToggleBtn {
+    position: absolute;
+    top: 0;
+    left: -5.9rem;
+    padding: 1.3rem 1.5rem;
+    background: #000;
+    cursor: pointer;
+}
+
+.themeToggle .ToggleBtn i {
+    color: #fff;
+    font-size: 3rem;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* For Media Query */
+@media(max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .Mainnavbar {
+        padding: 2rem;
+    }
+}
+
+@media(max-width:768px) {
+    #MenuBars {
+        display: initial;
+    }
+
+    .Mainnavbar .navbar {
+        position: absolute;
+        top: 115%;
+        left: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: var(--boxShadow);
+        border: 0.1px solid #000;
+        background: #fff;
+        transform: scale(0);
+        transform-origin: top right;
+        width: 30rem;
+        opacity: 0 !important;
+    }
+
+    .Mainnavbar .navbar.active {
+        transform: scale(1);
+        opacity: 1 !important;
+        transition: 0.3s ease-in;
+    }
+
+    .Mainnavbar .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 2.5rem;
+        box-shadow: var(--boxShadow);
+        padding: 7px;
+    }
+
+    /* For Home */
+    .Home .HomeContent h6,
+    .About .Content h6 {
+        font-size: 3rem;
+    }
+
+    .Home .HomeContent p {
+        font-size: 1.2rem;
+    }
+
+
+}
+
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+}
